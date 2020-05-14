@@ -13,17 +13,32 @@
         <Label Content="Floor Number" Margin="50" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         <Label Content="Room Number" Margin="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <Label Content="Monthly Hours(if student worker)" Margin="0,197,49.6,197" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-        <ComboBox x:Name="student_type_dropdown" HorizontalAlignment="Left" Margin="55,75,0,0" VerticalAlignment="Top" Width="120" />
-        <ComboBox x:Name="floor_number_dropdown" HorizontalAlignment="Left" Margin="55,222,0,176" VerticalAlignment="Center" Width="120">
-            <ComboBoxItem>
-                1
-            </ComboBoxItem>
+        <ComboBox x:Name="student_type_dropdown" HorizontalAlignment="Left" Margin="55,75,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem>Scholarship</ComboBoxItem>
+            <ComboBoxItem>Student Worker</ComboBoxItem>
+            <ComboBoxItem>Athlete</ComboBoxItem>
+        </ComboBox>
+        <ComboBox x:Name="floor_number_dropdown" HorizontalAlignment="Left" Margin="55,231,0,167" VerticalAlignment="Center" Width="120" RenderTransformOrigin="0.449,1.638">
+            <ComboBoxItem>1</ComboBoxItem>
+            <ComboBoxItem>2</ComboBoxItem>
+            <ComboBoxItem>3</ComboBoxItem>
+            <ComboBoxItem>4</ComboBoxItem>
+            <ComboBoxItem>5</ComboBoxItem>
+            <ComboBoxItem>6</ComboBoxItem>
+            <ComboBoxItem>7</ComboBoxItem>
+            <ComboBoxItem>8</ComboBoxItem>
         </ComboBox>
 
-        <ComboBox x:Name="room_number_dropdown" HorizontalAlignment="Center" Margin="350,223,310.6,176" VerticalAlignment="Center" Width="120"/>
+        <ComboBox x:Name="room_number_dropdown" HorizontalAlignment="Center" Margin="356,230,317.6,169" VerticalAlignment="Center" Width="120">
+            <ComboBoxItem>1</ComboBoxItem>
+            <ComboBoxItem>2</ComboBoxItem>
+            <ComboBoxItem>3</ComboBoxItem>
+            <ComboBoxItem>4</ComboBoxItem>
+        </ComboBox>
         <TextBox x:Name="first_name_box" HorizontalAlignment="Center" Height="23" Margin="50,75,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="last_name_box" HorizontalAlignment="Right" Height="23" Margin="0,75,110,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="monthly_hours_box" HorizontalAlignment="RIght" Height="23" Margin="0,221,109.6,176" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="120"/>
+        <TextBox x:Name="monthly_hours_box" HorizontalAlignment="RIght" Height="23" Margin="0,230,109.6,167" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="120"/>
+        <Button x:Name="add_btn_resident" Content="Add Resident" Foreground="White" Style="{StaticResource ButtonColor}" HorizontalAlignment="Left" Margin="564,320,0,0" VerticalAlignment="Top" Width="120" Height="41"/>
 
     </Grid>
 </Window>

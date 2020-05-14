@@ -11,7 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+using Project_3.Models;
 namespace Project_3
 {
     /// <summary>
@@ -19,9 +19,14 @@ namespace Project_3
     /// </summary>
     public partial class SearchWindow : Window
     {
+        DataSource source = new DataSource();
+        List<Prospective_Student> searchPageList = null;
         public SearchWindow()
         {
             InitializeComponent();
+            searchPageList = source.ReadData();
+            this.DataContext = searchPageList;
+            resident_grid.ItemsSource = searchPageList;
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Project_3.Models;
 
 
 namespace Project_3.Models
@@ -10,29 +11,31 @@ namespace Project_3.Models
 	class Prospective_Student
 	{
 		//Name	Email	Term_Start	time	number_of_visits
+		public int ID { get; set; }
 		public string FirstName { get; set; }
-		public string LastNme { get; set; }
-		public string Floor { get; set; }
-		public string Room { get; set; }
+		public string LastName { get; set; }
+		public int Floor { get; set; }
+		public int Room { get; set; }
 		public int Rent { get; set; }
 		public string Type { get; set; }
 
-		public Prospective_Student(string fname, string lname, string floor, string room, int rent, string studentType)
+		public Prospective_Student(int id, string fname, string lname, int floor, int room, int rent, string studentType)
 		{
+			ID = id;
 			FirstName = fname;
-			LastNme = lname;
+			LastName = lname;
 			Floor = floor;
 			Room = room;
 			Rent = rent;
 			Type = studentType;
 		}
 
-		/*Define a toString method 
+		//Define a toString method 
 		public override string ToString()
 		{
-			return String.Format($"Welcome, {Name}, Data: Email {Email}, Start Term: {StartTerm}, Time Format: {Time}, Number of visits to Dunwoody {NumberOfVisits}");
+			return String.Format($"{ID},{FirstName},{LastName},{Floor},{Room},{Rent},{Type}");
 		}
-		*/
+		
 
 	}
 }

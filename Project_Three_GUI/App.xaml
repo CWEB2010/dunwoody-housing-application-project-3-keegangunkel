@@ -5,7 +5,8 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <Style x:Key="ButtonColor">
-            <Setter Property= "ItemsControl.Background" Value="Red"/>
+            <Setter Property= "ItemsControl.Background" Value="IndianRed"/>
+            
         </Style>
     </Application.Resources>
 </Application>

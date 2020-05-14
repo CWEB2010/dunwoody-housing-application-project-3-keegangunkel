@@ -7,6 +7,17 @@
         mc:Ignorable="d"
         Title="SearchWindow" Height="450" Width="800">
     <Grid>
-        
+        <DataGrid x:Name="resident_grid">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="   Id     " Binding="{Binding ID}" />
+                <DataGridTextColumn Header="First Name" Binding="{Binding FirstName}"/>
+                <DataGridTextColumn Header="Last Name" Binding="{Binding LastName}"/>
+                <DataGridTextColumn Header="Floor Number" Binding="{Binding Floor}"/>
+                <DataGridTextColumn Header="Room Number" Binding="{Binding Room}"/>
+                <DataGridTextColumn Header="Rent Fee" Binding="{Binding Rent}"/>
+                <DataGridTextColumn Header="Student Type" Binding="{Binding Type}"/>
+            </DataGrid.Columns>
+            
+        </DataGrid>
     </Grid>
 </Window>
