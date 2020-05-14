@@ -20,7 +20,7 @@ namespace Project_3
     public partial class SearchWindow : Window
     {
         DataSource source = new DataSource();
-        List<Prospective_Student> searchPageList = null;
+        List<Resident_Student> searchPageList = null;
         public SearchWindow()
         {
             InitializeComponent();

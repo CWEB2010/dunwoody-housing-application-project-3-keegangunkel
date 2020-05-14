@@ -8,7 +8,7 @@ using Project_3.Models;
 
 namespace Project_3.Models
 {
-	class Prospective_Student
+	class Resident_Student
 	{
 		//Name	Email	Term_Start	time	number_of_visits
 		public int ID { get; set; }
@@ -19,7 +19,7 @@ namespace Project_3.Models
 		public int Rent { get; set; }
 		public string Type { get; set; }
 
-		public Prospective_Student(int id, string fname, string lname, int floor, int room, int rent, string studentType)
+		public Resident_Student(int id, string fname, string lname, int floor, int room, int rent, string studentType)
 		{
 			ID = id;
 			FirstName = fname;

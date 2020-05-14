@@ -21,8 +21,8 @@ namespace Project_3
     public partial class NewResidentWIndow : Window
     {
         DataSource source = new DataSource();
-        List<Prospective_Student> searchPageList = null;
-        Prospective_Student aResident;
+        List<Resident_Student> searchPageList = null;
+        Resident_Student aResident;
         public NewResidentWIndow()
         {
             InitializeComponent();
