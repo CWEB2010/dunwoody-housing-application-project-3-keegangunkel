@@ -20,19 +20,74 @@ namespace Project_3
     /// </summary>
     public partial class NewResidentWIndow : Window
     {
+        SearchWindow datagrid = new SearchWindow();
         DataSource source = new DataSource();
         List<Resident_Student> searchPageList = null;
         Resident_Student aResident;
         public NewResidentWIndow()
         {
+            
             InitializeComponent();
             searchPageList = source.ReadData();
-            this.DataContext = searchPageList;
-            //resident_grid.ItemsSource = searchPageList;
+
+            datagrid.resident_grid.DataContext = searchPageList;
+            datagrid.resident_grid.ItemsSource = searchPageList;
         }
 
         private void addResident(object sender, RoutedEventArgs e)
         {
+
+           ComboBoxItem studentType = (ComboBoxItem)student_type_dropdown.SelectedItem;
+           
+           /* ComboBoxItem floor = (ComboBoxItem)floor_number_dropdown.SelectedItem;
+            ComboBoxItem room = (ComboBoxItem)room_number_dropdown.SelectedItem;
+            aResident = new Resident_Student(student_id_box.Text, first_name_box.Text, last_name_box.Text, floor.Content.ToString(), room.Content.ToString(), 100, studentType.Content.ToString());
+            searchPageList.Add(aResident);
+            source.WriteData(searchPageList);
+            datagrid.resident_grid.ItemsSource = searchPageList;
+            datagrid.resident_grid.Items.Refresh();
+            searchPageList = source.ReadData();*/
+            
+            if (studentType.Content.ToString() == "Scholarship")
+            {
+                ComboBoxItem floor = (ComboBoxItem)floor_number_dropdown.SelectedItem;
+                ComboBoxItem room = (ComboBoxItem)room_number_dropdown.SelectedItem;
+                aResident = new Resident_Student(student_id_box.Text, first_name_box.Text, last_name_box.Text, floor.Content.ToString(), room.Content.ToString(), 100, studentType.Content.ToString());
+                searchPageList.Add(aResident);
+                source.WriteData(searchPageList);
+                datagrid.resident_grid.ItemsSource = searchPageList;
+                datagrid.resident_grid.Items.Refresh();
+                searchPageList = source.ReadData();
+
+
+            }
+            else if (studentType.Content.ToString() == "Athlete")
+            {
+                ComboBoxItem floor = (ComboBoxItem)floor_number_dropdown.SelectedItem;
+                ComboBoxItem room = (ComboBoxItem)room_number_dropdown.SelectedItem;
+                aResident = new Resident_Student(student_id_box.Text, first_name_box.Text, last_name_box.Text, floor.Content.ToString(), room.Content.ToString(), 1200, studentType.Content.ToString());
+                searchPageList.Add(aResident);
+                source.WriteData(searchPageList);
+                datagrid.resident_grid.ItemsSource = searchPageList;
+                datagrid.resident_grid.Items.Refresh();
+                searchPageList = source.ReadData();
+            }
+            else if (studentType.Content.ToString() == "Student Worker")
+            {
+                ComboBoxItem floor = (ComboBoxItem)floor_number_dropdown.SelectedItem;
+                ComboBoxItem room = (ComboBoxItem)room_number_dropdown.SelectedItem;
+                double monthlyHours = Convert.ToInt32(monthly_hours_box.Text);
+                double monthlyPay = monthlyHours * 14;
+                double monthlyRent = 1245 - monthlyPay;
+                aResident = new Resident_Student(student_id_box.Text, first_name_box.Text, last_name_box.Text, floor.Content.ToString(), room.Content.ToString(), monthlyRent, studentType.Content.ToString());
+                searchPageList.Add(aResident);
+                source.WriteData(searchPageList);
+                datagrid.resident_grid.ItemsSource = searchPageList;
+                datagrid.resident_grid.Items.Refresh();
+                searchPageList = source.ReadData();
+            }
+            datagrid.Show();
+            this.Close();
 
         }
     }

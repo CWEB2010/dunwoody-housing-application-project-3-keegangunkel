@@ -39,7 +39,7 @@ namespace Project_3.Models
 					{
 						//Our objective is to read in the records and create object instances
 						data = read.ReadLine().Split(',');
-						residentList.Add(new Resident_Student(Convert.ToInt32(data[0]),data[1], data[2], Convert.ToInt32(data[3]), Convert.ToInt32(data[4]), Convert.ToInt32(data[5]), data[6]));
+						residentList.Add(new Resident_Student(data[0],data[1], data[2], data[3], data[4], Convert.ToInt32(data[5]), data[6]));
 						Console.WriteLine(residentList[residentList.Count - 1]);
 
 						//line = read.ReadLine(); //primer
@@ -57,7 +57,7 @@ namespace Project_3.Models
 				}
 				return residentList;
 			}
-			 public void writeData(List<Resident_Student> prospectList)
+			 public void WriteData(List<Resident_Student> prospectList)
 			{
 				//Write to a file
 				FileStream output = new FileStream(PATH, FileMode.Create, FileAccess.Write);

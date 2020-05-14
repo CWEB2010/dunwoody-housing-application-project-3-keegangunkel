@@ -12,6 +12,7 @@
         <Label Content="Last Name" Margin="0,50,169.6,0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
         <Label Content="Floor Number" Margin="50" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         <Label Content="Room Number" Margin="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label Content="Student ID" Margin="50,0,0,74" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
         <Label Content="Monthly Hours(if student worker)" Margin="0,197,49.6,197" HorizontalAlignment="Right" VerticalAlignment="Center"/>
         <ComboBox x:Name="student_type_dropdown" HorizontalAlignment="Left" Margin="55,75,0,0" VerticalAlignment="Top" Width="120">
             <ComboBoxItem>Scholarship</ComboBoxItem>
@@ -37,6 +38,7 @@
         </ComboBox>
         <TextBox x:Name="first_name_box" HorizontalAlignment="Center" Height="23" Margin="50,75,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="last_name_box" HorizontalAlignment="Right" Height="23" Margin="0,75,110,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="student_id_box" HorizontalAlignment="Left" Height="23" Margin="55,0,0,46" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" Width="120"/>
         <TextBox x:Name="monthly_hours_box" HorizontalAlignment="RIght" Height="23" Margin="0,230,109.6,167" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="120"/>
         <Button x:Name="add_btn_resident" Content="Add Resident" Foreground="White" Style="{StaticResource ButtonColor}" HorizontalAlignment="Left" Margin="564,320,0,0" VerticalAlignment="Top" Width="120" Height="41" Click="addResident"/>
 
