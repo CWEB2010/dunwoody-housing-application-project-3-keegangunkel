@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="SearchWindow" Height="450" Width="800">
     <Grid>
-        <DataGrid x:Name="resident_grid" AutoGenerateColumns="False" x:FieldModifier="public">
+        <DataGrid x:Name="resident_grid" AutoGenerateColumns="False" x:FieldModifier="public" Margin="0,35,-0.4,169">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="   Id     " Binding="{Binding ID}" />
                 <DataGridTextColumn Header="First Name" Binding="{Binding FirstName}"/>
@@ -17,7 +17,17 @@
                 <DataGridTextColumn Header="Rent Fee" Binding="{Binding Rent}"/>
                 <DataGridTextColumn Header="Student Type" Binding="{Binding Type}"/>
             </DataGrid.Columns>
-            
+
         </DataGrid>
+        <DataGrid x:Name="count_grid" x:FieldModifier="public" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="164" Margin="0,256,-0.4,0" VerticalAlignment="Top" Width="794">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Worker Students" Binding="{Binding  WorkerCount}"/>
+                <DataGridTextColumn Header="Student Athletes" Binding="{Binding AthleteCount}"/>
+                <DataGridTextColumn Header="Scholarship Students" Binding="{Binding ScholarshipCount}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Back" Style="{StaticResource ButtonColor}" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <TextBox x:Name="search_box" HorizontalAlignment="Left" Height="27" Margin="433,6,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="125" KeyUp="search_box_KeyUp"/>
+        <Label Content="Search by ID:" HorizontalAlignment="Left" Margin="349,7,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

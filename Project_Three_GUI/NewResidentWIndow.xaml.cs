@@ -23,7 +23,11 @@ namespace Project_3
         SearchWindow datagrid = new SearchWindow();
         DataSource source = new DataSource();
         List<Resident_Student> searchPageList = null;
+
         Resident_Student aResident;
+        int studentWorkerCount;
+        int studentScholarshipCount = 1;
+        int studentAthleteCount = 1;
         public NewResidentWIndow()
         {
             
@@ -58,6 +62,9 @@ namespace Project_3
                 datagrid.resident_grid.ItemsSource = searchPageList;
                 datagrid.resident_grid.Items.Refresh();
                 searchPageList = source.ReadData();
+                studentScholarshipCount +=1;
+                Student_Count studentAthlete = new Student_Count(studentAthleteCount, studentScholarshipCount, studentWorkerCount);
+
 
 
             }
@@ -71,6 +78,8 @@ namespace Project_3
                 datagrid.resident_grid.ItemsSource = searchPageList;
                 datagrid.resident_grid.Items.Refresh();
                 searchPageList = source.ReadData();
+                studentAthleteCount = studentAthleteCount + 1;
+                Student_Count studentAthlete = new Student_Count(studentAthleteCount,studentScholarshipCount,studentWorkerCount);
             }
             else if (studentType.Content.ToString() == "Student Worker")
             {
@@ -85,8 +94,19 @@ namespace Project_3
                 datagrid.resident_grid.ItemsSource = searchPageList;
                 datagrid.resident_grid.Items.Refresh();
                 searchPageList = source.ReadData();
+                studentWorkerCount = studentWorkerCount + 1;
+                Student_Count studentAthlete = new Student_Count(studentAthleteCount, studentScholarshipCount, studentWorkerCount);
+
             }
             datagrid.Show();
+            this.Close();
+
+        }
+
+        private void back_btn_Click(object sender, RoutedEventArgs e)
+        {
+            SelectionWindow selectionWindow = new SelectionWindow();
+            selectionWindow.Show();
             this.Close();
 
         }

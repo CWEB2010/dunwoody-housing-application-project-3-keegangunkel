@@ -57,6 +57,7 @@
     </ApplicationDefinition>
     <Compile Include="Models\DataSource.cs" />
     <Compile Include="Models\Resident_Student.cs" />
+    <Compile Include="Models\Student_Count.cs" />
     <Compile Include="NewResidentWIndow.xaml.cs">
       <DependentUpon>NewResidentWIndow.xaml</DependentUpon>
     </Compile>
@@ -117,6 +118,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

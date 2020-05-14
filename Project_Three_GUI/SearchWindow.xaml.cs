@@ -21,12 +21,34 @@ namespace Project_3
     {
         DataSource source = new DataSource();
         List<Resident_Student> searchPageList = null;
+        List<Student_Count> countList = null;
         public SearchWindow()
         {
             InitializeComponent();
             searchPageList = source.ReadData();
-            this.DataContext = searchPageList;
+            resident_grid.DataContext = searchPageList;
             resident_grid.ItemsSource = searchPageList;
+            countList = source.CountList();
+            count_grid.DataContext = countList;
+            count_grid.ItemsSource = countList;
+            count_grid.Items.Refresh();
+
+
+
+        }
+
+        private void search_box_KeyUp(object sender, KeyEventArgs e)
+        {
+            var filtered = searchPageList.Where(Resident_Student => Resident_Student.ID.StartsWith(search_box.Text));
+
+            resident_grid.ItemsSource = filtered;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            SelectionWindow selectionWindow = new SelectionWindow();
+            selectionWindow.Show();
+            this.Close();
         }
     }
 }
