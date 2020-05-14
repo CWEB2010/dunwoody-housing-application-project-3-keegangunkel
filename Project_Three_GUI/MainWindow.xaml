@@ -5,11 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project_3"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Background="IndianRed">
     <Grid>
-        <TextBox Name="username_box" HorizontalAlignment="Left" Height="23" Margin="589,198,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="180" />
-        <Label Content="Dunwoody Housing Manager" HorizontalAlignment="Left" Margin="589,72,0,0" VerticalAlignment="Top" Width="167"/>
+        <TextBox Name="username_box" HorizontalAlignment="Left" Height="23" Margin="589,198,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="180" SelectionOpacity="10" />
+        <Label Content="Welcome To" FontSize="20" HorizontalAlignment="Left" Margin="594,32,0,0" VerticalAlignment="Top" Width="142" Foreground="Black" Height="41"/>
+        <Label Content="The Dunwoody" FontSize="20" HorizontalAlignment="Left" Margin="589,78,-0.4,0" VerticalAlignment="Top" Width="205" Foreground="Black" Height="41"/>
+        <Label Content="Housing Application" FontSize="20" HorizontalAlignment="Left" Margin="575,124,0,0" VerticalAlignment="Top" Width="209" Foreground="Black" Height="41"/>
         <TextBox Name="password_box" HorizontalAlignment="Left" Height="23" Margin="589,254,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="180"/>
-        <Button Name="login_btn" Content="Login" HorizontalAlignment="Left" Margin="638,326,0,0" VerticalAlignment="Top" Width="76" Foreground="White" Click="GoToSelectionWindow" Style="{StaticResource ButtonColor}"/>
+        <Button Name="login_btn" Content="Login" HorizontalAlignment="Left" Margin="638,326,0,0" VerticalAlignment="Top" Width="76" Foreground="Black" Click="GoToSelectionWindow" Background="White"/>
+        <Image HorizontalAlignment="Left" Height="420" Source="C:\Users\gunkeec\source\repos\Project_3\Project_Three_GUI\Resources\page-1-background.jpg" VerticalAlignment="Top" Width="589"/>
     </Grid>
 </Window>

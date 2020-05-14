@@ -13,7 +13,7 @@ namespace Project_3.Models
     {
 
 			//DECLARATIONS
-			const string PATH = @"C:\Users\gunkeec\Desktop\Residents File.csv";
+			const string PATH = @"C:\Users\gunkeec\Documents\Semester 2\Programming\Project_3_Keegan_Gunkel\Residents File.xlsx";
 
 			//FileStream input;
 			//StreamReader read;

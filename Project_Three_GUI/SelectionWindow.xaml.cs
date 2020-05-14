@@ -23,12 +23,16 @@ namespace Project_3
         {
             InitializeComponent();
         }
+
+        // Method to go to the search window
         private void GoToSearchWindow(object sender, RoutedEventArgs e)
         {
             SearchWindow searchWindow = new SearchWindow();
             searchWindow.Show();
             this.Close();
         }
+
+        // Method to go to the new resident window
 
         private void GoToNewResWindow(object sender, RoutedEventArgs e)
         {

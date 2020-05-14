@@ -20,45 +20,45 @@ namespace Project_3
     /// </summary>
     public partial class NewResidentWIndow : Window
     {
+        //Initializes my source for the data and a new search window so I can access the resident data grid from another window
         SearchWindow datagrid = new SearchWindow();
         DataSource source = new DataSource();
+        // List to hold the data read in
         List<Resident_Student> searchPageList = null;
-
+        //Initialize a resident variable
         Resident_Student aResident;
+        // Counters for the dsplaying of how many students of each type there are
         int studentWorkerCount;
-        int studentScholarshipCount = 1;
-        int studentAthleteCount = 1;
+        int studentScholarshipCount;
+        int studentAthleteCount;
+
         public NewResidentWIndow()
         {
             
             InitializeComponent();
+            //Reads in the data to the datagrid
             searchPageList = source.ReadData();
-
             datagrid.resident_grid.DataContext = searchPageList;
             datagrid.resident_grid.ItemsSource = searchPageList;
         }
 
+        //Method to add residents
         private void addResident(object sender, RoutedEventArgs e)
         {
 
            ComboBoxItem studentType = (ComboBoxItem)student_type_dropdown.SelectedItem;
-           
-           /* ComboBoxItem floor = (ComboBoxItem)floor_number_dropdown.SelectedItem;
-            ComboBoxItem room = (ComboBoxItem)room_number_dropdown.SelectedItem;
-            aResident = new Resident_Student(student_id_box.Text, first_name_box.Text, last_name_box.Text, floor.Content.ToString(), room.Content.ToString(), 100, studentType.Content.ToString());
-            searchPageList.Add(aResident);
-            source.WriteData(searchPageList);
-            datagrid.resident_grid.ItemsSource = searchPageList;
-            datagrid.resident_grid.Items.Refresh();
-            searchPageList = source.ReadData();*/
-            
+            //If and else if statments, basically identitical except for the rent pay and the counters, so I won't comment everyone for redundant purposes
             if (studentType.Content.ToString() == "Scholarship")
             {
+                // Assigns the dropdown menus to variables
                 ComboBoxItem floor = (ComboBoxItem)floor_number_dropdown.SelectedItem;
                 ComboBoxItem room = (ComboBoxItem)room_number_dropdown.SelectedItem;
+                // Creates a new Resident based off of the inputted values
                 aResident = new Resident_Student(student_id_box.Text, first_name_box.Text, last_name_box.Text, floor.Content.ToString(), room.Content.ToString(), 100, studentType.Content.ToString());
                 searchPageList.Add(aResident);
+                // Writes out the list to the data file 
                 source.WriteData(searchPageList);
+                // These next 3 commands work together to make sure the resident data grid is up to date with the right information
                 datagrid.resident_grid.ItemsSource = searchPageList;
                 datagrid.resident_grid.Items.Refresh();
                 searchPageList = source.ReadData();
@@ -103,6 +103,7 @@ namespace Project_3
 
         }
 
+        //Method to go back to the selection window
         private void back_btn_Click(object sender, RoutedEventArgs e)
         {
             SelectionWindow selectionWindow = new SelectionWindow();

@@ -26,9 +26,11 @@ namespace Project_3
             InitializeComponent();
 
         }
+
+        //Method to go to the selection menu
             private void GoToSelectionWindow(object sender, RoutedEventArgs e)
             {
-
+                // Makes sure username and password is correct
                 if (username_box.Text == "home" && password_box.Text.ToString() == "1234")
                 {
                 SelectionWindow selectionWindow = new SelectionWindow();
