@@ -1,0 +1,11 @@
+﻿<Application x:Class="Project_3.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Project_3"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style x:Key="ButtonColor">
+            <Setter Property= "ItemsControl.Background" Value="Red"/>
+        </Style>
+    </Application.Resources>
+</Application>
