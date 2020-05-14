@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -13,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Project_Three_GUI
+namespace Project_3
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,6 +24,24 @@ namespace Project_Three_GUI
         public MainWindow()
         {
             InitializeComponent();
+
         }
+            private void GoToSelectionWindow(object sender, RoutedEventArgs e)
+            {
+
+                if (username_box.Text == "home" && password_box.Text.ToString() == "1234")
+                {
+                SelectionWindow selectionWindow = new SelectionWindow();
+                selectionWindow.Show();
+                this.Close();
+                }
+            else
+            {
+                Console.WriteLine("Wrong username or password. Please try again.");
+            }
+
+            }
+
+        
     }
 }

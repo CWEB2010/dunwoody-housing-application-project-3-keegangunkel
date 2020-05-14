@@ -55,6 +55,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Models\DataSource.cs" />
+    <Compile Include="Models\Resident_Student.cs" />
+    <Compile Include="NewResidentWIndow.xaml.cs">
+      <DependentUpon>NewResidentWIndow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SearchPage.xaml.cs">
+      <DependentUpon>SearchPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SearchWindow.xaml.cs">
+      <DependentUpon>SearchWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SelectionWindow.xaml.cs">
       <DependentUpon>SelectionWindow.xaml</DependentUpon>
     </Compile>
@@ -70,6 +81,18 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="NewResidentWIndow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SearchPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SearchWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="SelectionWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -101,8 +124,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Project_3
 {
     /// <summary>
-    /// Interaction logic for SelectionWindow.xaml
+    /// Interaction logic for SearchWindow.xaml
     /// </summary>
-    public partial class SelectionWindow : Window
+    public partial class SearchWindow : Window
     {
-        public SelectionWindow()
+        public SearchWindow()
         {
             InitializeComponent();
         }

@@ -9,8 +9,8 @@
     <Grid>
         <Label Content="Welcome" FontSize="40" HorizontalAlignment="Left" Margin="310,70,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.315,0.511" Height="65" Width="175"/>
         <Label Content="Please select one of the following" HorizontalAlignment="Left" Margin="310,175,0,0" VerticalAlignment="Top" Width="195"/>
-        <Button Foreground="White" Content="New Resident" HorizontalAlignment="Left" Margin="150,283,0,0" VerticalAlignment="Top" Width="154" Style="{StaticResource ButtonColor}" Height="78"/>
-        <Button Foreground="White" Content="Search" HorizontalAlignment="Left" Margin="500,283,0,0" VerticalAlignment="Top" Width="154" Style="{StaticResource ButtonColor}" Height="78"/>
+        <Button x:Name="new_resident_btn" Foreground="White" Content="New Resident" HorizontalAlignment="Left" Margin="150,283,0,0" VerticalAlignment="Top" Width="154" Style="{StaticResource ButtonColor}" Height="78" Click="GoToNewResWindow"/>
+        <Button x:Name="search_btn" Foreground="White" Content="Search" HorizontalAlignment="Left" Margin="500,283,0,0" VerticalAlignment="Top" Width="154" Click="GoToSearchWindow" Style="{StaticResource ButtonColor}" Height="78"/>
 
     </Grid>
 </Window>
