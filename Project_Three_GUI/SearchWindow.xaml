@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="SearchWindow" Height="450" Width="800">
     <Grid>
-        <DataGrid x:Name="resident_grid">
+        <DataGrid x:Name="resident_grid" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="   Id     " Binding="{Binding ID}" />
                 <DataGridTextColumn Header="First Name" Binding="{Binding FirstName}"/>

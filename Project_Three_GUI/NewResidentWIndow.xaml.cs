@@ -20,10 +20,20 @@ namespace Project_3
     /// </summary>
     public partial class NewResidentWIndow : Window
     {
+        DataSource source = new DataSource();
+        List<Prospective_Student> searchPageList = null;
+        Prospective_Student aResident;
         public NewResidentWIndow()
         {
             InitializeComponent();
+            searchPageList = source.ReadData();
+            this.DataContext = searchPageList;
+            //resident_grid.ItemsSource = searchPageList;
         }
 
+        private void addResident(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
